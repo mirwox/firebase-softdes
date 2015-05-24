@@ -1,8 +1,3 @@
-import json
-
-
-
-
 
 # Cada item vai ser um dicionário
 phone = {}
@@ -31,9 +26,7 @@ if __name__ == '__main__':
 
     fb = firebase.FirebaseApplication(FIREBASE_URL, None)
 
-    # Converte os dados para o formato Json
-    json_produtos = json.dumps(produtos)
     # Escreve dados no Firebase
-    fb.put('/', "Produtos", json_produtos)
+    fb.put('/', "Produtos", produtos)
 
 
